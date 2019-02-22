@@ -10,7 +10,7 @@
     ]
   },
   "dependencies": {
-    "slonik": "^14.19.0"
+    "slonik": "^15.0.0"
   },
   "description": "Normalizes Slonik query.",
   "devDependencies": {
