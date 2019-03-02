@@ -4,7 +4,7 @@ import test from 'ava';
 import createQueryContext from '../../helpers/createQueryContext';
 import createQueryNormalisationInterceptor from '../../../src/factories/createQueryNormalisationInterceptor';
 
-test('strips comments from the query', async (t) => {
+test('strips comments from the query', (t) => {
   const interceptor = createQueryNormalisationInterceptor({
     stripComments: true
   });
@@ -15,7 +15,7 @@ test('strips comments from the query', async (t) => {
     throw new Error('Unexpected state.');
   }
 
-  const query = await transformQuery(createQueryContext(), {
+  const query = transformQuery(createQueryContext(), {
     sql: 'SELECT 1; --',
     values: []
   });

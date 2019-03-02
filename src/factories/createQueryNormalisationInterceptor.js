@@ -16,7 +16,7 @@ type ConfigurationType = {|
 
 export default (configuration?: ConfigurationType): InterceptorType => {
   return {
-    transformQuery: async (context, query) => {
+    transformQuery: (context, query) => {
       let sql = query.sql;
 
       if (!configuration || configuration.stripComments !== false) {
