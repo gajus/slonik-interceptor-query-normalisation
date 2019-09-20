@@ -1,17 +1,17 @@
 // @flow
 
 import type {
-  InterceptorType
+  InterceptorType,
 } from 'slonik';
 import {
-  stripComments
+  stripComments,
 } from '../utilities';
 
 /**
  * @property stripComments Strips comments from the query (default: true).
  */
 type ConfigurationType = {|
-  +stripComments?: boolean
+  +stripComments?: boolean,
 |};
 
 export default (configuration?: ConfigurationType): InterceptorType => {
@@ -25,8 +25,8 @@ export default (configuration?: ConfigurationType): InterceptorType => {
 
       return {
         ...query,
-        sql
+        sql,
       };
-    }
+    },
   };
 };

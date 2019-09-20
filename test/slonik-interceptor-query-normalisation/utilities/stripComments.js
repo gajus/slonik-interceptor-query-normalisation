@@ -2,7 +2,7 @@
 
 import test from 'ava';
 import {
-  stripComments
+  stripComments,
 } from '../../../src/utilities';
 
 test('removes content begining with -- from every line in the input', (t) => {

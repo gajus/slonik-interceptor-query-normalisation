@@ -1,5 +1,5 @@
 // @flow
 
 export {
-  createQueryNormalisationInterceptor
+  createQueryNormalisationInterceptor,
 } from './factories';

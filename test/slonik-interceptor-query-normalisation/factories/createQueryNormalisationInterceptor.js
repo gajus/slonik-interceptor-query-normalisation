@@ -6,7 +6,7 @@ import createQueryNormalisationInterceptor from '../../../src/factories/createQu
 
 test('strips comments from the query', (t) => {
   const interceptor = createQueryNormalisationInterceptor({
-    stripComments: true
+    stripComments: true,
   });
 
   const transformQuery = interceptor.transformQuery;
@@ -17,11 +17,11 @@ test('strips comments from the query', (t) => {
 
   const query = transformQuery(createQueryContext(), {
     sql: 'SELECT 1; --',
-    values: []
+    values: [],
   });
 
   t.deepEqual(query, {
     sql: 'SELECT 1;',
-    values: []
+    values: [],
   });
 });
