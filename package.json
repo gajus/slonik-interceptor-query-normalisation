@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "core-js": "^3.4.0",
-    "slonik": "^21.0.0"
+    "slonik": "^21.4.0"
   },
   "description": "Normalizes Slonik query.",
   "devDependencies": {
